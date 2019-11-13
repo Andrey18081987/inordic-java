@@ -1,14 +1,18 @@
 package com.example;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class CompareDouble {
 
 	public static void main(String[] args) {
-		var a = 1.000_001d - 0.000_001d;
-		var b = 1.0d;
-		var eps = 1e-12;
-		
-//		| a - b | < ε
-		System.out.println(Math.abs(a - b) < eps);
+		var input = new Scanner(System.in);
+		var n = input.nextInt();
+		var res = 1;
+		for (var i = 1; i <= n; i+=1) {
+			res *= i;
+		}
+		System.out.println(res);
 	}
 
 }
